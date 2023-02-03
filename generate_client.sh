@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-REPO="openziti/edge"
+REPO="openziti/edge-api"
 
 function _generate {
     local tag="$1"
@@ -15,7 +15,7 @@ function _generate {
         --git-host 'github.com' \
         --git-repo-id 'openziti-edge-client-python' \
         --git-user-id 'openziti-test-kitchen' \
-        --input-spec "https://raw.githubusercontent.com/$REPO/$tag/specs/client.yml" \
+        --input-spec "https://raw.githubusercontent.com/$REPO/$tag/client.yml" \
         --output '/out' \
         --package-name 'openziti_edge_client' \
         --additional-properties=packageVersion="${tag#v}" \
