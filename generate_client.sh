@@ -40,7 +40,7 @@ function _test_tag_exists {
 }
 
 function local_modify {
-    echo "tags" >> .gitignore
+    grep -q 'tags' .gitignore || echo 'tags' >> .gitignore
 }
 
 function _usage {
