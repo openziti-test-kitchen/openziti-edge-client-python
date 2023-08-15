@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **created_at** | **datetime** |  | 
 **id** | **str** |  | 
 **updated_at** | **datetime** |  | 
+**auth_policy** | [**EntityRef**](EntityRef.md) |  | 
 **auth_policy_id** | **str** |  | 
 **authenticators** | [**IdentityAuthenticators**](IdentityAuthenticators.md) |  | 
 **default_hosting_cost** | [**TerminatorCost**](TerminatorCost.md) |  | 

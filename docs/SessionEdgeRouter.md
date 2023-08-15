@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **cost** | **int, none_type** |  | 
+**disabled** | **bool** |  | 
 **hostname** | **str** |  | 
 **is_online** | **bool** |  | 
 **name** | **str** |  | 

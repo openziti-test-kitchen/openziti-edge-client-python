@@ -19,6 +19,7 @@ Create a session resource.
 
 ### Example
 
+* OAuth Authentication (oauth2):
 * Api Key Authentication (ztSession):
 
 ```python
@@ -39,6 +40,12 @@ configuration = openziti_edge_client.Configuration(
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
+
+# Configure OAuth2 access token for authorization: oauth2
+configuration = openziti_edge_client.Configuration(
+    host = "https://demo.ziti.dev/edge/client/v1"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: ztSession
 configuration.api_key['ztSession'] = 'YOUR_API_KEY'
@@ -78,7 +85,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ztSession](../README.md#ztSession)
+[oauth2](../README.md#oauth2), [ztSession](../README.md#ztSession)
 
 ### HTTP request headers
 
@@ -105,6 +112,7 @@ Delete a session by id.
 
 ### Example
 
+* OAuth Authentication (oauth2):
 * Api Key Authentication (ztSession):
 
 ```python
@@ -124,6 +132,12 @@ configuration = openziti_edge_client.Configuration(
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
+
+# Configure OAuth2 access token for authorization: oauth2
+configuration = openziti_edge_client.Configuration(
+    host = "https://demo.ziti.dev/edge/client/v1"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: ztSession
 configuration.api_key['ztSession'] = 'YOUR_API_KEY'
@@ -159,7 +173,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ztSession](../README.md#ztSession)
+[oauth2](../README.md#oauth2), [ztSession](../README.md#ztSession)
 
 ### HTTP request headers
 
@@ -187,6 +201,7 @@ Retrieves a single session by id.
 
 ### Example
 
+* OAuth Authentication (oauth2):
 * Api Key Authentication (ztSession):
 
 ```python
@@ -206,6 +221,12 @@ configuration = openziti_edge_client.Configuration(
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
+
+# Configure OAuth2 access token for authorization: oauth2
+configuration = openziti_edge_client.Configuration(
+    host = "https://demo.ziti.dev/edge/client/v1"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: ztSession
 configuration.api_key['ztSession'] = 'YOUR_API_KEY'
@@ -241,7 +262,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ztSession](../README.md#ztSession)
+[oauth2](../README.md#oauth2), [ztSession](../README.md#ztSession)
 
 ### HTTP request headers
 
@@ -268,6 +289,7 @@ Retrieves a list of active sessions resources; supports filtering, sorting, and 
 
 ### Example
 
+* OAuth Authentication (oauth2):
 * Api Key Authentication (ztSession):
 
 ```python
@@ -287,6 +309,12 @@ configuration = openziti_edge_client.Configuration(
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
+
+# Configure OAuth2 access token for authorization: oauth2
+configuration = openziti_edge_client.Configuration(
+    host = "https://demo.ziti.dev/edge/client/v1"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: ztSession
 configuration.api_key['ztSession'] = 'YOUR_API_KEY'
@@ -327,7 +355,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ztSession](../README.md#ztSession)
+[oauth2](../README.md#oauth2), [ztSession](../README.md#ztSession)
 
 ### HTTP request headers
 

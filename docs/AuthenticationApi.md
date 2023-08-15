@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 Authenticate via a method supplied via a query string parameter
 
-Allows authentication  Methods include \"password\" and \"cert\" 
+Allowed authentication methods include \"password\", \"cert\", and \"ext-jwt\" 
 
 ### Example
 
@@ -106,7 +106,7 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | The API session associated with the session used to issue the request |  -  |
 **400** | The supplied request contains invalid fields or could not be parsed (json and non-json bodies). The error&#39;s code, message, and cause fields can be inspected for further information |  -  |
-**403** | The authentication request could not be processed as the credentials are invalid |  -  |
+**401** | The authentication request could not be processed as the credentials are invalid |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -119,6 +119,7 @@ Completes MFA authentication by submitting a MFA time based one time token or ba
 
 ### Example
 
+* OAuth Authentication (oauth2):
 * Api Key Authentication (ztSession):
 
 ```python
@@ -138,6 +139,12 @@ configuration = openziti_edge_client.Configuration(
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
+
+# Configure OAuth2 access token for authorization: oauth2
+configuration = openziti_edge_client.Configuration(
+    host = "https://demo.ziti.dev/edge/client/v1"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: ztSession
 configuration.api_key['ztSession'] = 'YOUR_API_KEY'
@@ -175,7 +182,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ztSession](../README.md#ztSession)
+[oauth2](../README.md#oauth2), [ztSession](../README.md#ztSession)
 
 ### HTTP request headers
 

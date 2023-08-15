@@ -23,6 +23,7 @@ Completes MFA authentication by submitting a MFA time based one time token or ba
 
 ### Example
 
+* OAuth Authentication (oauth2):
 * Api Key Authentication (ztSession):
 
 ```python
@@ -42,6 +43,12 @@ configuration = openziti_edge_client.Configuration(
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
+
+# Configure OAuth2 access token for authorization: oauth2
+configuration = openziti_edge_client.Configuration(
+    host = "https://demo.ziti.dev/edge/client/v1"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: ztSession
 configuration.api_key['ztSession'] = 'YOUR_API_KEY'
@@ -79,7 +86,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ztSession](../README.md#ztSession)
+[oauth2](../README.md#oauth2), [ztSession](../README.md#ztSession)
 
 ### HTTP request headers
 
@@ -105,6 +112,7 @@ Allows regeneration of recovery codes of an MFA enrollment. Requires a current v
 
 ### Example
 
+* OAuth Authentication (oauth2):
 * Api Key Authentication (ztSession):
 
 ```python
@@ -125,6 +133,12 @@ configuration = openziti_edge_client.Configuration(
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
+
+# Configure OAuth2 access token for authorization: oauth2
+configuration = openziti_edge_client.Configuration(
+    host = "https://demo.ziti.dev/edge/client/v1"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: ztSession
 configuration.api_key['ztSession'] = 'YOUR_API_KEY'
@@ -162,7 +176,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ztSession](../README.md#ztSession)
+[oauth2](../README.md#oauth2), [ztSession](../README.md#ztSession)
 
 ### HTTP request headers
 
@@ -189,6 +203,7 @@ Disable MFA for the current identity. Requires a current valid time based one ti
 
 ### Example
 
+* OAuth Authentication (oauth2):
 * Api Key Authentication (ztSession):
 
 ```python
@@ -196,7 +211,6 @@ import time
 import openziti_edge_client
 from openziti_edge_client.api import mfa_api
 from openziti_edge_client.model.api_error_envelope import ApiErrorEnvelope
-from openziti_edge_client.model.mfa_code import MfaCode
 from openziti_edge_client.model.empty import Empty
 from pprint import pprint
 # Defining the host is optional and defaults to https://demo.ziti.dev/edge/client/v1
@@ -210,6 +224,12 @@ configuration = openziti_edge_client.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
+# Configure OAuth2 access token for authorization: oauth2
+configuration = openziti_edge_client.Configuration(
+    host = "https://demo.ziti.dev/edge/client/v1"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
 # Configure API key authorization: ztSession
 configuration.api_key['ztSession'] = 'YOUR_API_KEY'
 
@@ -221,15 +241,12 @@ with openziti_edge_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = mfa_api.MFAApi(api_client)
     mfa_validation_code = "mfa-validation-code_example" # str |  (optional)
-    mfa_validation = MfaCode(
-        code="code_example",
-    ) # MfaCode | An MFA validation request (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
         # Disable MFA for the current identity
-        api_response = api_instance.delete_mfa(mfa_validation_code=mfa_validation_code, mfa_validation=mfa_validation)
+        api_response = api_instance.delete_mfa(mfa_validation_code=mfa_validation_code)
         pprint(api_response)
     except openziti_edge_client.ApiException as e:
         print("Exception when calling MFAApi->delete_mfa: %s\n" % e)
@@ -241,7 +258,6 @@ with openziti_edge_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **mfa_validation_code** | **str**|  | [optional]
- **mfa_validation** | [**MfaCode**](MfaCode.md)| An MFA validation request | [optional]
 
 ### Return type
 
@@ -249,11 +265,11 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ztSession](../README.md#ztSession)
+[oauth2](../README.md#oauth2), [ztSession](../README.md#ztSession)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 
@@ -276,6 +292,7 @@ Returns details about the current MFA enrollment. If enrollment has not been com
 
 ### Example
 
+* OAuth Authentication (oauth2):
 * Api Key Authentication (ztSession):
 
 ```python
@@ -295,6 +312,12 @@ configuration = openziti_edge_client.Configuration(
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
+
+# Configure OAuth2 access token for authorization: oauth2
+configuration = openziti_edge_client.Configuration(
+    host = "https://demo.ziti.dev/edge/client/v1"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: ztSession
 configuration.api_key['ztSession'] = 'YOUR_API_KEY'
@@ -326,7 +349,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[ztSession](../README.md#ztSession)
+[oauth2](../README.md#oauth2), [ztSession](../README.md#ztSession)
 
 ### HTTP request headers
 
@@ -353,6 +376,7 @@ Shows an QR code image for unverified MFA enrollments. 404s if the MFA enrollmen
 
 ### Example
 
+* OAuth Authentication (oauth2):
 * Api Key Authentication (ztSession):
 
 ```python
@@ -370,6 +394,12 @@ configuration = openziti_edge_client.Configuration(
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
+
+# Configure OAuth2 access token for authorization: oauth2
+configuration = openziti_edge_client.Configuration(
+    host = "https://demo.ziti.dev/edge/client/v1"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: ztSession
 configuration.api_key['ztSession'] = 'YOUR_API_KEY'
@@ -400,7 +430,7 @@ void (empty response body)
 
 ### Authorization
 
-[ztSession](../README.md#ztSession)
+[oauth2](../README.md#oauth2), [ztSession](../README.md#ztSession)
 
 ### HTTP request headers
 
@@ -426,6 +456,7 @@ Allows the viewing of recovery codes of an MFA enrollment. Requires a current va
 
 ### Example
 
+* OAuth Authentication (oauth2):
 * Api Key Authentication (ztSession):
 
 ```python
@@ -446,6 +477,12 @@ configuration = openziti_edge_client.Configuration(
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
+
+# Configure OAuth2 access token for authorization: oauth2
+configuration = openziti_edge_client.Configuration(
+    host = "https://demo.ziti.dev/edge/client/v1"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: ztSession
 configuration.api_key['ztSession'] = 'YOUR_API_KEY'
@@ -486,7 +523,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ztSession](../README.md#ztSession)
+[oauth2](../README.md#oauth2), [ztSession](../README.md#ztSession)
 
 ### HTTP request headers
 
@@ -513,6 +550,7 @@ Allows authenticator based MFA enrollment. If enrollment has already been comple
 
 ### Example
 
+* OAuth Authentication (oauth2):
 * Api Key Authentication (ztSession):
 
 ```python
@@ -532,6 +570,12 @@ configuration = openziti_edge_client.Configuration(
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
+
+# Configure OAuth2 access token for authorization: oauth2
+configuration = openziti_edge_client.Configuration(
+    host = "https://demo.ziti.dev/edge/client/v1"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: ztSession
 configuration.api_key['ztSession'] = 'YOUR_API_KEY'
@@ -563,7 +607,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[ztSession](../README.md#ztSession)
+[oauth2](../README.md#oauth2), [ztSession](../README.md#ztSession)
 
 ### HTTP request headers
 
@@ -590,6 +634,7 @@ Completes MFA enrollment by accepting a time based one time password as verifica
 
 ### Example
 
+* OAuth Authentication (oauth2):
 * Api Key Authentication (ztSession):
 
 ```python
@@ -610,6 +655,12 @@ configuration = openziti_edge_client.Configuration(
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
+
+# Configure OAuth2 access token for authorization: oauth2
+configuration = openziti_edge_client.Configuration(
+    host = "https://demo.ziti.dev/edge/client/v1"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: ztSession
 configuration.api_key['ztSession'] = 'YOUR_API_KEY'
@@ -647,7 +698,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ztSession](../README.md#ztSession)
+[oauth2](../README.md#oauth2), [ztSession](../README.md#ztSession)
 
 ### HTTP request headers
 

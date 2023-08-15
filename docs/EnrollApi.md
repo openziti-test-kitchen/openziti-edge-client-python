@@ -4,7 +4,7 @@ All URIs are relative to *https://demo.ziti.dev/edge/client/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**enroll**](EnrollApi.md#enroll) | **POST** /enroll | Legacy enrollment endpoint
+[**enroll**](EnrollApi.md#enroll) | **POST** /enroll | Enroll an identity via one-time-token
 [**enroll_ca**](EnrollApi.md#enroll_ca) | **POST** /enroll/ca | Enroll an identity with a pre-exchanged certificate
 [**enroll_er_ott**](EnrollApi.md#enroll_er_ott) | **POST** /enroll/erott | Enroll an edge-router
 [**enroll_ott**](EnrollApi.md#enroll_ott) | **POST** /enroll/ott | Enroll an identity via one-time-token
@@ -18,9 +18,9 @@ Method | HTTP request | Description
 # **enroll**
 > Empty enroll()
 
-Legacy enrollment endpoint
+Enroll an identity via one-time-token
 
-endpoint defers to the logic in the more specific `enroll/*` endpoints
+present a OTT and CSR to receive a long-lived client certificate
 
 ### Example
 
@@ -44,12 +44,13 @@ with openziti_edge_client.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = enroll_api.EnrollApi(api_client)
     token = "token_example" # str |  (optional)
+    method = "method_example" # str |  (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-        # Legacy enrollment endpoint
-        api_response = api_instance.enroll(token=token)
+        # Enroll an identity via one-time-token
+        api_response = api_instance.enroll(token=token, method=method)
         pprint(api_response)
     except openziti_edge_client.ApiException as e:
         print("Exception when calling EnrollApi->enroll: %s\n" % e)
@@ -61,6 +62,7 @@ with openziti_edge_client.ApiClient() as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **token** | **str**|  | [optional]
+ **method** | **str**|  | [optional]
 
 ### Return type
 
@@ -430,6 +432,7 @@ This endpoint only functions for certificates issued by the controller. 3rd part
 
 ### Example
 
+* OAuth Authentication (oauth2):
 * Api Key Authentication (ztSession):
 
 ```python
@@ -450,6 +453,12 @@ configuration = openziti_edge_client.Configuration(
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
+
+# Configure OAuth2 access token for authorization: oauth2
+configuration = openziti_edge_client.Configuration(
+    host = "https://demo.ziti.dev/edge/client/v1"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: ztSession
 configuration.api_key['ztSession'] = 'YOUR_API_KEY'
@@ -489,7 +498,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ztSession](../README.md#ztSession)
+[oauth2](../README.md#oauth2), [ztSession](../README.md#ztSession)
 
 ### HTTP request headers
 
@@ -588,6 +597,7 @@ After submitting a CSR for a new client certificate the resulting public certifi
 
 ### Example
 
+* OAuth Authentication (oauth2):
 * Api Key Authentication (ztSession):
 
 ```python
@@ -608,6 +618,12 @@ configuration = openziti_edge_client.Configuration(
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
+
+# Configure OAuth2 access token for authorization: oauth2
+configuration = openziti_edge_client.Configuration(
+    host = "https://demo.ziti.dev/edge/client/v1"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Configure API key authorization: ztSession
 configuration.api_key['ztSession'] = 'YOUR_API_KEY'
@@ -647,7 +663,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ztSession](../README.md#ztSession)
+[oauth2](../README.md#oauth2), [ztSession](../README.md#ztSession)
 
 ### HTTP request headers
 

@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **id** | **str** |  | 
 **updated_at** | **datetime** |  | 
 **cost** | **int, none_type** |  | 
+**disabled** | **bool** |  | 
 **hostname** | **str** |  | 
 **is_online** | **bool** |  | 
 **name** | **str** |  | 
