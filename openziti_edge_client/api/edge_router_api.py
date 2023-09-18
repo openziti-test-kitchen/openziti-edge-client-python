@@ -41,8 +41,8 @@ class EdgeRouterApi(object):
             settings={
                 'response_type': (ListCurrentIdentityEdgeRoutersEnvelope,),
                 'auth': [
-                    'oauth2',
-                    'ztSession'
+                    'ztSession',
+                    'oauth2'
                 ],
                 'endpoint_path': '/current-identity/edge-routers',
                 'operation_id': 'get_current_identity_edge_routers',

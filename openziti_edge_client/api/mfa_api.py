@@ -45,8 +45,8 @@ class MFAApi(object):
             settings={
                 'response_type': (Empty,),
                 'auth': [
-                    'oauth2',
-                    'ztSession'
+                    'ztSession',
+                    'oauth2'
                 ],
                 'endpoint_path': '/authenticate/mfa',
                 'operation_id': 'authenticate_mfa',
@@ -98,8 +98,8 @@ class MFAApi(object):
             settings={
                 'response_type': (DetailMfaRecoveryCodesEnvelope,),
                 'auth': [
-                    'oauth2',
-                    'ztSession'
+                    'ztSession',
+                    'oauth2'
                 ],
                 'endpoint_path': '/current-identity/mfa/recovery-codes',
                 'operation_id': 'create_mfa_recovery_codes',
@@ -151,8 +151,8 @@ class MFAApi(object):
             settings={
                 'response_type': (Empty,),
                 'auth': [
-                    'oauth2',
-                    'ztSession'
+                    'ztSession',
+                    'oauth2'
                 ],
                 'endpoint_path': '/current-identity/mfa',
                 'operation_id': 'delete_mfa',
@@ -201,8 +201,8 @@ class MFAApi(object):
             settings={
                 'response_type': (DetailMfaEnvelope,),
                 'auth': [
-                    'oauth2',
-                    'ztSession'
+                    'ztSession',
+                    'oauth2'
                 ],
                 'endpoint_path': '/current-identity/mfa',
                 'operation_id': 'detail_mfa',
@@ -246,8 +246,8 @@ class MFAApi(object):
             settings={
                 'response_type': None,
                 'auth': [
-                    'oauth2',
-                    'ztSession'
+                    'ztSession',
+                    'oauth2'
                 ],
                 'endpoint_path': '/current-identity/mfa/qr-code',
                 'operation_id': 'detail_mfa_qr_code',
@@ -289,8 +289,8 @@ class MFAApi(object):
             settings={
                 'response_type': (Empty,),
                 'auth': [
-                    'oauth2',
-                    'ztSession'
+                    'ztSession',
+                    'oauth2'
                 ],
                 'endpoint_path': '/current-identity/mfa/recovery-codes',
                 'operation_id': 'detail_mfa_recovery_codes',
@@ -345,8 +345,8 @@ class MFAApi(object):
             settings={
                 'response_type': (CreateEnvelope,),
                 'auth': [
-                    'oauth2',
-                    'ztSession'
+                    'ztSession',
+                    'oauth2'
                 ],
                 'endpoint_path': '/current-identity/mfa',
                 'operation_id': 'enroll_mfa',
@@ -390,8 +390,8 @@ class MFAApi(object):
             settings={
                 'response_type': (Empty,),
                 'auth': [
-                    'oauth2',
-                    'ztSession'
+                    'ztSession',
+                    'oauth2'
                 ],
                 'endpoint_path': '/current-identity/mfa/verify',
                 'operation_id': 'verify_mfa',

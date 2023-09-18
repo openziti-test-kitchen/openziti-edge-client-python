@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
 REPO="openziti/edge-api"
-CONTAINER_TAG="v6.3.0"
+CONTAINER_TAG="v6.6.0"
 
 function _generate {
     local tag="$1"
-    
+
     echo "Generating client for tag: $tag"
     docker run \
         --cap-add ALL \
@@ -30,7 +30,8 @@ function _get_latest_tag {
 
 function _test_tag_exists {
     local tag="$1"
-    local tags="$(curl -sSL "https://api.github.com/repos/$REPO/tags")"
+    local tags
+    tags="$(curl -sSL "https://api.github.com/repos/$REPO/tags")"
     if ! jq --arg tag "$tag" '[.[] | select(.name == $tag)][0] or error("err")' <<< "$tags" &> /dev/null; then
         echo "Tag does not exist: $tag" >&2
         echo "Valid tags are:"

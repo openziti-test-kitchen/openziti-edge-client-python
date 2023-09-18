@@ -107,8 +107,8 @@ class AuthenticationApi(object):
             settings={
                 'response_type': (Empty,),
                 'auth': [
-                    'oauth2',
-                    'ztSession'
+                    'ztSession',
+                    'oauth2'
                 ],
                 'endpoint_path': '/authenticate/mfa',
                 'operation_id': 'authenticate_mfa',

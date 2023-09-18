@@ -45,8 +45,8 @@ class SessionApi(object):
             settings={
                 'response_type': (SessionCreateEnvelope,),
                 'auth': [
-                    'oauth2',
-                    'ztSession'
+                    'ztSession',
+                    'oauth2'
                 ],
                 'endpoint_path': '/sessions',
                 'operation_id': 'create_session',
@@ -98,8 +98,8 @@ class SessionApi(object):
             settings={
                 'response_type': (Empty,),
                 'auth': [
-                    'oauth2',
-                    'ztSession'
+                    'ztSession',
+                    'oauth2'
                 ],
                 'endpoint_path': '/sessions/{id}',
                 'operation_id': 'delete_session',
@@ -150,8 +150,8 @@ class SessionApi(object):
             settings={
                 'response_type': (DetailSessionEnvelope,),
                 'auth': [
-                    'oauth2',
-                    'ztSession'
+                    'ztSession',
+                    'oauth2'
                 ],
                 'endpoint_path': '/sessions/{id}',
                 'operation_id': 'detail_session',
@@ -202,8 +202,8 @@ class SessionApi(object):
             settings={
                 'response_type': (ListSessionsEnvelope,),
                 'auth': [
-                    'oauth2',
-                    'ztSession'
+                    'ztSession',
+                    'oauth2'
                 ],
                 'endpoint_path': '/sessions',
                 'operation_id': 'list_sessions',

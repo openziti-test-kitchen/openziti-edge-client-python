@@ -41,8 +41,8 @@ class ServicesApi(object):
             settings={
                 'response_type': (ListCurrentApiSessionServiceUpdatesEnvelope,),
                 'auth': [
-                    'oauth2',
-                    'ztSession'
+                    'ztSession',
+                    'oauth2'
                 ],
                 'endpoint_path': '/current-api-session/service-updates',
                 'operation_id': 'list_service_updates',

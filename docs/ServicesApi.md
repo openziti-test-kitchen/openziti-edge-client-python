@@ -16,8 +16,8 @@ Retrieves data indicating the last time data relevant to this API Session was al
 
 ### Example
 
-* OAuth Authentication (oauth2):
 * Api Key Authentication (ztSession):
+* OAuth Authentication (oauth2):
 
 ```python
 import time
@@ -37,17 +37,17 @@ configuration = openziti_edge_client.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure OAuth2 access token for authorization: oauth2
-configuration = openziti_edge_client.Configuration(
-    host = "https://demo.ziti.dev/edge/client/v1"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
 # Configure API key authorization: ztSession
 configuration.api_key['ztSession'] = 'YOUR_API_KEY'
 
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['ztSession'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: oauth2
+configuration = openziti_edge_client.Configuration(
+    host = "https://demo.ziti.dev/edge/client/v1"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Enter a context with an instance of the API client
 with openziti_edge_client.ApiClient(configuration) as api_client:
@@ -73,7 +73,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[oauth2](../README.md#oauth2), [ztSession](../README.md#ztSession)
+[ztSession](../README.md#ztSession), [oauth2](../README.md#oauth2)
 
 ### HTTP request headers
 

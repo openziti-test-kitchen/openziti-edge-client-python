@@ -54,8 +54,8 @@ class CurrentAPISessionApi(object):
             settings={
                 'response_type': (CreateCurrentApiSessionCertificateEnvelope,),
                 'auth': [
-                    'oauth2',
-                    'ztSession'
+                    'ztSession',
+                    'oauth2'
                 ],
                 'endpoint_path': '/current-api-session/certificates',
                 'operation_id': 'create_current_api_session_certificate',
@@ -107,8 +107,8 @@ class CurrentAPISessionApi(object):
             settings={
                 'response_type': (Empty,),
                 'auth': [
-                    'oauth2',
-                    'ztSession'
+                    'ztSession',
+                    'oauth2'
                 ],
                 'endpoint_path': '/current-api-session',
                 'operation_id': 'current_api_session_delete',
@@ -152,8 +152,8 @@ class CurrentAPISessionApi(object):
             settings={
                 'response_type': (Empty,),
                 'auth': [
-                    'oauth2',
-                    'ztSession'
+                    'ztSession',
+                    'oauth2'
                 ],
                 'endpoint_path': '/current-api-session/certificates/{id}',
                 'operation_id': 'delete_current_api_session_certificate',
@@ -204,8 +204,8 @@ class CurrentAPISessionApi(object):
             settings={
                 'response_type': (DetailCurrentApiSessionCertificateEnvelope,),
                 'auth': [
-                    'oauth2',
-                    'ztSession'
+                    'ztSession',
+                    'oauth2'
                 ],
                 'endpoint_path': '/current-api-session/certificates/{id}',
                 'operation_id': 'detail_current_api_session_certificate',
@@ -256,8 +256,8 @@ class CurrentAPISessionApi(object):
             settings={
                 'response_type': (DetailAuthenticatorEnvelope,),
                 'auth': [
-                    'oauth2',
-                    'ztSession'
+                    'ztSession',
+                    'oauth2'
                 ],
                 'endpoint_path': '/current-identity/authenticators/{id}',
                 'operation_id': 'detail_current_identity_authenticator',
@@ -308,8 +308,8 @@ class CurrentAPISessionApi(object):
             settings={
                 'response_type': (IdentityExtendEnrollmentEnvelope,),
                 'auth': [
-                    'oauth2',
-                    'ztSession'
+                    'ztSession',
+                    'oauth2'
                 ],
                 'endpoint_path': '/current-identity/authenticators/{id}/extend',
                 'operation_id': 'extend_current_identity_authenticator',
@@ -367,8 +367,8 @@ class CurrentAPISessionApi(object):
             settings={
                 'response_type': (Empty,),
                 'auth': [
-                    'oauth2',
-                    'ztSession'
+                    'ztSession',
+                    'oauth2'
                 ],
                 'endpoint_path': '/current-identity/authenticators/{id}/extend-verify',
                 'operation_id': 'extend_verify_current_identity_authenticator',
@@ -426,8 +426,8 @@ class CurrentAPISessionApi(object):
             settings={
                 'response_type': (CurrentApiSessionDetailEnvelope,),
                 'auth': [
-                    'oauth2',
-                    'ztSession'
+                    'ztSession',
+                    'oauth2'
                 ],
                 'endpoint_path': '/current-api-session',
                 'operation_id': 'get_current_api_session',
@@ -472,8 +472,8 @@ class CurrentAPISessionApi(object):
             settings={
                 'response_type': (ListCurrentApiSessionCertificatesEnvelope,),
                 'auth': [
-                    'oauth2',
-                    'ztSession'
+                    'ztSession',
+                    'oauth2'
                 ],
                 'endpoint_path': '/current-api-session/certificates',
                 'operation_id': 'list_current_api_session_certificates',
@@ -532,8 +532,8 @@ class CurrentAPISessionApi(object):
             settings={
                 'response_type': (ListAuthenticatorsEnvelope,),
                 'auth': [
-                    'oauth2',
-                    'ztSession'
+                    'ztSession',
+                    'oauth2'
                 ],
                 'endpoint_path': '/current-identity/authenticators',
                 'operation_id': 'list_current_identity_authenticators',
@@ -592,8 +592,8 @@ class CurrentAPISessionApi(object):
             settings={
                 'response_type': (ListCurrentApiSessionServiceUpdatesEnvelope,),
                 'auth': [
-                    'oauth2',
-                    'ztSession'
+                    'ztSession',
+                    'oauth2'
                 ],
                 'endpoint_path': '/current-api-session/service-updates',
                 'operation_id': 'list_service_updates',
@@ -637,8 +637,8 @@ class CurrentAPISessionApi(object):
             settings={
                 'response_type': (Empty,),
                 'auth': [
-                    'oauth2',
-                    'ztSession'
+                    'ztSession',
+                    'oauth2'
                 ],
                 'endpoint_path': '/current-identity/authenticators/{id}',
                 'operation_id': 'patch_current_identity_authenticator',
@@ -696,8 +696,8 @@ class CurrentAPISessionApi(object):
             settings={
                 'response_type': (Empty,),
                 'auth': [
-                    'oauth2',
-                    'ztSession'
+                    'ztSession',
+                    'oauth2'
                 ],
                 'endpoint_path': '/current-identity/authenticators/{id}',
                 'operation_id': 'update_current_identity_authenticator',

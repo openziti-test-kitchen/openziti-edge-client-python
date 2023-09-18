@@ -46,8 +46,8 @@ class ExtendEnrollmentApi(object):
             settings={
                 'response_type': (IdentityExtendEnrollmentEnvelope,),
                 'auth': [
-                    'oauth2',
-                    'ztSession'
+                    'ztSession',
+                    'oauth2'
                 ],
                 'endpoint_path': '/current-identity/authenticators/{id}/extend',
                 'operation_id': 'extend_current_identity_authenticator',
@@ -155,8 +155,8 @@ class ExtendEnrollmentApi(object):
             settings={
                 'response_type': (Empty,),
                 'auth': [
-                    'oauth2',
-                    'ztSession'
+                    'ztSession',
+                    'oauth2'
                 ],
                 'endpoint_path': '/current-identity/authenticators/{id}/extend-verify',
                 'operation_id': 'extend_verify_current_identity_authenticator',

@@ -46,8 +46,8 @@ class ServiceApi(object):
             settings={
                 'response_type': (Empty,),
                 'auth': [
-                    'oauth2',
-                    'ztSession'
+                    'ztSession',
+                    'oauth2'
                 ],
                 'endpoint_path': '/services/{id}',
                 'operation_id': 'delete_service',
@@ -98,8 +98,8 @@ class ServiceApi(object):
             settings={
                 'response_type': (DetailServiceEnvelope,),
                 'auth': [
-                    'oauth2',
-                    'ztSession'
+                    'ztSession',
+                    'oauth2'
                 ],
                 'endpoint_path': '/services/{id}',
                 'operation_id': 'detail_service',
@@ -150,8 +150,8 @@ class ServiceApi(object):
             settings={
                 'response_type': (ListClientTerminatorsEnvelope,),
                 'auth': [
-                    'oauth2',
-                    'ztSession'
+                    'ztSession',
+                    'oauth2'
                 ],
                 'endpoint_path': '/services/{id}/terminators',
                 'operation_id': 'list_service_terminators',
@@ -217,8 +217,8 @@ class ServiceApi(object):
             settings={
                 'response_type': (ListServicesEnvelope,),
                 'auth': [
-                    'oauth2',
-                    'ztSession'
+                    'ztSession',
+                    'oauth2'
                 ],
                 'endpoint_path': '/services',
                 'operation_id': 'list_services',
@@ -288,8 +288,8 @@ class ServiceApi(object):
             settings={
                 'response_type': (Empty,),
                 'auth': [
-                    'oauth2',
-                    'ztSession'
+                    'ztSession',
+                    'oauth2'
                 ],
                 'endpoint_path': '/services/{id}',
                 'operation_id': 'patch_service',
@@ -347,8 +347,8 @@ class ServiceApi(object):
             settings={
                 'response_type': (Empty,),
                 'auth': [
-                    'oauth2',
-                    'ztSession'
+                    'ztSession',
+                    'oauth2'
                 ],
                 'endpoint_path': '/services/{id}',
                 'operation_id': 'update_service',

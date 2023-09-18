@@ -41,8 +41,8 @@ class ExternalJWTSignerApi(object):
             settings={
                 'response_type': (ListClientExternalJwtSignersEnvelope,),
                 'auth': [
-                    'oauth2',
-                    'ztSession'
+                    'ztSession',
+                    'oauth2'
                 ],
                 'endpoint_path': '/external-jwt-signers',
                 'operation_id': 'list_external_jwt_signers',

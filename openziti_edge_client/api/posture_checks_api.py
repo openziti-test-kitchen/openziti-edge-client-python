@@ -42,8 +42,8 @@ class PostureChecksApi(object):
             settings={
                 'response_type': (PostureResponseEnvelope,),
                 'auth': [
-                    'oauth2',
-                    'ztSession'
+                    'ztSession',
+                    'oauth2'
                 ],
                 'endpoint_path': '/posture-response',
                 'operation_id': 'create_posture_response',
@@ -95,8 +95,8 @@ class PostureChecksApi(object):
             settings={
                 'response_type': (PostureResponseEnvelope,),
                 'auth': [
-                    'oauth2',
-                    'ztSession'
+                    'ztSession',
+                    'oauth2'
                 ],
                 'endpoint_path': '/posture-response-bulk',
                 'operation_id': 'create_posture_response_bulk',
